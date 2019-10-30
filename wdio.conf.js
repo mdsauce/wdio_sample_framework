@@ -34,9 +34,12 @@ exports.config = {
     // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
-    specs: [
-        './test/specs/**/*.js'
-    ],
+    specs: ['./test/specs/**/*.js'],
+    suites: {
+        auth: [
+            './test/specs/login_default.js'
+        ]
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -70,20 +73,24 @@ exports.config = {
         // 5 instances get started at a time.
         // maxInstances: 5,
         //
-        browserName: 'firefox',
-        version: 'latest',
-        platform: 'windows 10',
-        build: rand_build
+        "browserName": 'firefox',
+        "browserVersion": '70.0',
+        "platformName": 'Windows 10',
+        "sauce:options": {
+            build: rand_build
+        }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
     },
     {
-        platform: 'macos 10.14',
-        browserName: 'firefox',
-        version: 'latest',
-        build: rand_build
+        "browserName": 'firefox',
+        "browserVersion": '70.0',
+        "platformName": 'macOS 10.14',
+        "sauce:options": {
+            build: rand_build
+        }
     },
     {
         platform: 'macos 10.14',
@@ -168,7 +175,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 60000,
+        require: ['@babel/register']
     },
     //
     // =====
