@@ -16,7 +16,6 @@ describe('Inventory page', () => {
     })
 
     it('should have cheapest item at end of list', () => {
-        console.log(inventoryPage.lastItemName.getValue())
         expect(InventoryPage.lastItemName.getText()).to.contain("Onesie")
     })
 })
