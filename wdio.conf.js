@@ -39,6 +39,10 @@ exports.config = {
         auth: [
             './test/specs/login_default.js',
             './test/specs/problem_users.js'
+        ],
+        inventory: [
+            './test/specs/inventory_default.js',
+            './test/specs/cart.js'
         ]
     },
     // Patterns to exclude.
@@ -75,36 +79,64 @@ exports.config = {
         // maxInstances: 5,
         //
         "browserName": 'firefox',
-        "browserVersion": '70.0',
+        "browserVersion": 'latest',
         "platformName": 'Windows 10',
         "sauce:options": {
             build: rand_build
-        }
+        },
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    },
-    {
-        "browserName": 'firefox',
-        "browserVersion": '70.0',
-        "platformName": 'macOS 10.14',
-        "sauce:options": {
+        },
+        {
+            "browserName": 'firefox',
+            "browserVersion": 'latest',
+            "platformName": 'macOS 10.14',
+            "sauce:options": {
+                build: rand_build
+            }
+        },
+        {
+            "browserName": 'safari',
+            "browserVersion": 'latest',
+            "platformName": 'macOS 10.14',
+            "sauce:options": {
+                build: rand_build
+            }
+        },
+        {
+            platform: 'macos 10.14',
+            browserName: 'chrome',
+            version: 'latest',
+            build: rand_build        
+        },
+        {
+            platform: 'windows 10',
+            browserName: 'chrome',
+            version: 'latest',
+            build: rand_build       
+        },
+        {
+            platform: 'windows 10',
+            browserName: 'chrome',
+            version: 'latest-1',
             build: rand_build
+        },
+        {
+            platform: 'windows 10',
+            browserName: 'chrome',
+            version: 'latest-2',
+            build: rand_build
+        },
+        {
+            platformName: 'Windows 10',
+            browserName: 'firefox',
+            browserVersion: 'latest-1',
+            "sauce:options": {
+                build: rand_build
+            }        
         }
-    },
-    {
-        platform: 'macos 10.14',
-        browserName: 'chrome',
-        version: 'latest',
-        build: rand_build
-    },
-    {
-        platform: 'windows 10',
-        browserName: 'chrome',
-        version: 'latest',
-        build: rand_build
-    }
     ],
     //
     // ===================
