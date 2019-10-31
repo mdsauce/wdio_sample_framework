@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
+    "auth": "./node_modules/.bin/wdio wdio.auth.conf.js",
     "suite": "./node_modules/.bin/wdio wdio.conf.js --suite",
     "spec": "./node_modules/.bin/wdio wdio.conf.js --spec"
   },

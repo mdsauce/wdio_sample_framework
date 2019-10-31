@@ -1,5 +1,5 @@
 var faker = require('faker');
-var rand_build = faker.fake("{{commerce.color}} {{commerce.productName}} {{system.semver}}")
+var rand_build = faker.fake("generic build: {{commerce.color}} {{commerce.productName}} {{system.semver}}")
 exports.config = {
     //
     // ====================
@@ -37,7 +37,8 @@ exports.config = {
     specs: ['./test/specs/**/*.js'],
     suites: {
         auth: [
-            './test/specs/login_default.js'
+            './test/specs/login_default.js',
+            './test/specs/problem_users.js'
         ]
     },
     // Patterns to exclude.
