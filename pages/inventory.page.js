@@ -8,7 +8,8 @@ class InventoryPage extends Base {
     get sorter() { return $('.product_sort_container')}
     get highToLow() { return $('option*=high to low') }
     get firstItemName() { return $('.inventory_item_name') }
-    get lastItemName() { return $('//div/div[2]/div[2]/div/div[2]/div/div[6]/div[2]/a/div') }
+    get lastItemName() { return this.inventoryList.$$('.inventory_item_name')[5] }
+    get inventoryList() { return $$('.inventory_list')[0] }
 
     open() {
         super.open('https://www.saucedemo.com/inventory.html')
@@ -17,6 +18,14 @@ class InventoryPage extends Base {
     sortHighToLow() {
         this.sorter.click()
         this.highToLow.click()
+    }
+
+    itemName(number) { 
+        return this.inventoryList.$$('.inventory_item_name')[number-1] 
+    }
+
+    item(number) {
+        return this.inventoryList.$$('.inventory_item')[number-1] 
     }
 }
 
