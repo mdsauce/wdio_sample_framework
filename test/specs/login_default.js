@@ -1,6 +1,7 @@
-// auth/standard_login.js
+// standard_login.js
 var expect = require('chai').expect
 import LoginPage from '../../pages/login.page'
+import InventoryPage from '../../pages/inventory.page'
 
 describe('login page', () => {
     it('should deny access with wrong creds', () => {
@@ -16,6 +17,6 @@ describe('login page', () => {
         LoginPage.username.setValue('standard_user')
         LoginPage.password.setValue('secret_sauce')
         LoginPage.submit()
-        // expect to find logo or new url or whatever after logging in
+        expect(InventoryPage.logo).to.exist
     })
 })
