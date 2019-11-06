@@ -18,4 +18,8 @@ describe('Cart', () => {
         InventoryPage.item(1).$('.pricebar').$('button').click()
         expect(InventoryPage.item(1).$('.pricebar').$('button').getText()).to.contain("REMOVE")
     })
+
+    // it ('should have the cart badge', () => {
+    //     expect( $('.fa-layers-counter shopping_cart_badge'))
+    // })
 })
