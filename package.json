@@ -7,7 +7,8 @@
     "test": "./node_modules/.bin/wdio wdio.conf.js",
     "auth": "./node_modules/.bin/wdio wdio.auth.conf.js",
     "suite": "./node_modules/.bin/wdio wdio.conf.js --suite",
-    "spec": "./node_modules/.bin/wdio wdio.conf.js --spec"
+    "spec": "./node_modules/.bin/wdio wdio.conf.js --spec",
+    "rdc": "./node_modules/.bin/wdio wdio.conf.rdc.west.js"
   },
   "author": "max.dobeck",
   "license": "ISC",
