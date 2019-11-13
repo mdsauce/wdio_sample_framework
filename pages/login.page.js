@@ -7,7 +7,9 @@ class LoginPage extends Base {
     get password() { return $('#password') }
     get submitBtn() { return $('.btn_action') }
     get loginErr() { return $('h3*=Username and password do not match')}
-    get lockedOut() { return $('h3*=Sorry, this user has been locked out')}
+    get lockedOut() { return $('h3*=this user has been locked out')}
+    
+
 
     open() {
         super.open('https://www.saucedemo.com/')
