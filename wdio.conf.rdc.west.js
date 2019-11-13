@@ -72,9 +72,9 @@ exports.config = {
     //
     capabilities: [
         {
-            devoceName: 'iPhone 8',
-            testobject_api_key: process.env.my_project_KEY,
+            deviceName: 'iPhone 8',
             platformName: 'iOS',
+            testobject_api_key: process.env.my_project_KEY,
         }
     ],
     //
