@@ -1,0 +1,1 @@
+Check package.json for `npm run` commands.  `npm test` will just run everything.
