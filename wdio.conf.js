@@ -1,5 +1,9 @@
 var faker = require('faker');
-var rand_build = faker.fake("generic build: {{commerce.color}} {{commerce.productName}} {{system.semver}}")
+var rand_build = faker.fake("{{commerce.color}} {{commerce.productName}} {{system.semver}}")
+var npm_args = process.argv.slice(2);
+if (npm_args.length >= 2) {
+    rand_build = npm_args[npm_args.length - 1] + ' ' + rand_build
+}
 exports.config = {
     //
     // ====================
@@ -171,8 +175,8 @@ exports.config = {
     // gets prepended directly.
     baseUrl: 'https://www.saucedemo.com/',
     //
-    // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    // Default for all waitFor* commands.
+    waitforTimeout: 20000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
@@ -208,7 +212,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000,
+        timeout: 120000,
         require: ['@babel/register']
     },
     //
