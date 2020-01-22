@@ -8,7 +8,6 @@ describe('problem users', () => {
         LoginPage.username.setValue('locked_out_user')
         LoginPage.password.setValue('secret_sauce')
         LoginPage.submit()
-        browser.getContext()
         expect(LoginPage.lockedOut.getText()).to.contain("this user has been locked out")
     })
 })

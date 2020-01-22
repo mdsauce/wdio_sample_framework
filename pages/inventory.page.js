@@ -20,8 +20,10 @@ class InventoryPage extends Base {
         this.highToLow.click()
     }
 
-    itemName(number) { 
-        return this.inventoryList.$$('.inventory_item_name')[number-1] 
+    itemName(number) {
+        let n = this.inventoryList.$$('.inventory_item_name')[number-1]
+        // add retry step here.  If n == null or whatever
+        return  n
     }
 
     item(number) {
