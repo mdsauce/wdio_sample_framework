@@ -125,6 +125,13 @@ exports.config = {
             version: 'latest',
             build: rand_build       
         },
+        // {
+        //     platform: 'windows 10',
+        //     browserName: 'chrome',
+        //     version: 'latest',
+        //     build:  'Pre-run test',
+        //     prerun: 'https://raw.githubusercontent.com/phillram/saucelabs-preruns/master/windows/hostEdit.bat'       
+        // },
         {
             platform: 'windows 10',
             browserName: 'chrome',
