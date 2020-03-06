@@ -1,5 +1,6 @@
 var faker = require('faker');
 var rand_build = faker.fake("{{commerce.color}} {{commerce.productName}} {{system.semver}}")
+// replace the random build name if user passes in a 2nd arg
 var npm_args = process.argv.slice(2);
 if (npm_args.length >= 2) {
     rand_build = npm_args[npm_args.length - 1]
