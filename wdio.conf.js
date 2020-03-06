@@ -2,7 +2,7 @@ var faker = require('faker');
 var rand_build = faker.fake("{{commerce.color}} {{commerce.productName}} {{system.semver}}")
 var npm_args = process.argv.slice(2);
 if (npm_args.length >= 2) {
-    rand_build = npm_args[npm_args.length - 1] + ' ' + rand_build
+    rand_build = npm_args[npm_args.length - 1]
 }
 exports.config = {
     //
