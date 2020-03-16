@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
-    "test:emusim": "./node_modules/.bin/wdio wdio.conf.js",
+    "test:emusim": "./node_modules/.bin/wdio wdio.conf.emusim.js",
     "test:eu": "./node_modules/.bin/wdio wdio.conf.eu.central.js",
     "auth": "./node_modules/.bin/wdio wdio.auth.conf.js",
     "suite": "./node_modules/.bin/wdio wdio.conf.js --suite",

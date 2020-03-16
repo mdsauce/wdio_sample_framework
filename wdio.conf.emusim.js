@@ -87,14 +87,15 @@ exports.config = {
             // 5 instances get started at a time.
             // maxInstances: 5,
             //
-            "browserName": 'safari',
-            "appiumVersion": '1.16.0',
-            "deviceName": 'iPhone XS Simulator',
-            "platformName": 'iOS',
+            "browser": 'safari',
+            "appium": '1.16.0',
+            "device": 'iPhone XS Simulator',
+            "platform": 'iOS',
             "platformVersion": '13.2',
-            "sauce:options": {
-                build: rand_build
-            },
+            "build": rand_build
+            // "sauce:options": {
+            //     build: rand_build
+            // },
             
         }
     ],
