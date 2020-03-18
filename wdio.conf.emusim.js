@@ -92,11 +92,19 @@ exports.config = {
             "device": 'iPhone XS Simulator',
             "platform": 'iOS',
             "platformVersion": '13.2',
-            "build": rand_build
+            "build": "iOS EMUSIM " + rand_build
             // "sauce:options": {
             //     build: rand_build
             // },
             
+        }, 
+        {
+            "browser": 'chrome',
+            "appium": '1.15.0',
+            "device": 'Android GoogleAPI Emulator',
+            "platform": 'Android',
+            "platformVersion": '8.1',
+            "build": "android EMUSIM " + rand_build
         }
     ],
     //

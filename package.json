@@ -10,7 +10,7 @@
     "auth": "./node_modules/.bin/wdio wdio.auth.conf.js",
     "suite": "./node_modules/.bin/wdio wdio.conf.js --suite",
     "spec": "./node_modules/.bin/wdio wdio.conf.js --spec",
-    "rdc": "./node_modules/.bin/wdio wdio.conf.rdc.west.js",
+    "test:rdc": "./node_modules/.bin/wdio wdio.conf.rdc.west.js",
     "rdc-spec": "./node_modules/.bin/wdio wdio.conf.rdc.west.js --spec"
   },
   "author": "max.dobeck",
