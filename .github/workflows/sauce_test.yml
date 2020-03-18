@@ -18,7 +18,8 @@ jobs:
         with:
           node-version: 12.x
       - run: npm outdated
-
+      - continue-on-error: true
+  
   us-west-test:
     runs-on: ubuntu-latest
 
