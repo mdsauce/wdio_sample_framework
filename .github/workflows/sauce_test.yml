@@ -5,11 +5,8 @@ name: SauceTest
 
 on:
   push:
-  schedule: 
+  schedule:
     - cron: 0 */2 * * *
-  pull_request:
-    branches:
-      - master
 
 
 jobs:
