@@ -12,15 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Test on US-WEST
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 12.x
     - run: npm ci
     - run: npm test
       env:
-        CI: true
-    
-      with:
-        node-version: 12.x
-
+        CI: true        
