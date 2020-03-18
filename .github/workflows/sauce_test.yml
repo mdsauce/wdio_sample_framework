@@ -4,9 +4,7 @@
 name: SauceTest
 
 on:
-  push
-  pull_request:
-    branches: [ master ]
+  [ push, pull_request ]
 
 jobs:
   us-west-test:
