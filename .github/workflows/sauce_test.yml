@@ -30,7 +30,7 @@ jobs:
       with:
         node-version: 12.x
     - run: npm ci
-    - run: npm test:eu
+    - run: npm run test:eu
       env:
         CI: true
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
