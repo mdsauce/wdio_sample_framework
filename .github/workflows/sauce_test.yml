@@ -18,4 +18,6 @@ jobs:
     - run: npm ci
     - run: npm test
       env:
-        CI: true        
+        CI: true
+        SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+        SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
