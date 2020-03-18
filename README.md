@@ -6,5 +6,7 @@ Run tests on EMUSIM, VDC, and Real Devices.  Defer to each wdio.conf file for mo
 ### CICD
 Github Actions should run on every Pull request and `git push`.
 
+`!FYI` if you clone this repo you need to follow the [create encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets) guide here for your repo.
+
 ### Custom Build Name
 `npm run test build_name_here`
