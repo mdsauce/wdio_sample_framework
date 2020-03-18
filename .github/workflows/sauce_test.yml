@@ -4,7 +4,7 @@
 name: SauceTest
 
 on:
-  push
+  push:
   schedule: 
     - cron: 0 */2 * * *
   pull_request:
