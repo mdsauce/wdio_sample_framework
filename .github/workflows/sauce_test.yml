@@ -11,6 +11,7 @@ on:
 jobs:
   outdated-package-check:
     runs-on: ubuntu-latest
+    continue-on-error: true
 
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +19,6 @@ jobs:
         with:
           node-version: 12.x
       - run: npm outdated
-      continue-on-error: true
   
   us-west-test:
     runs-on: ubuntu-latest
