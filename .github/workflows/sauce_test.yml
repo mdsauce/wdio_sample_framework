@@ -7,7 +7,6 @@ on: [ push, pull_request ]
 
 jobs:
   us-west-test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -17,6 +16,21 @@ jobs:
         node-version: 12.x
     - run: npm ci
     - run: npm test
+      env:
+        CI: true
+        SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+        SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+
+  eu-central-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: npm ci
+    - run: npm test:eu
       env:
         CI: true
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
