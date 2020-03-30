@@ -7,9 +7,7 @@
     "test": "./node_modules/.bin/wdio wdio.conf.js",
     "test:emusim": "./node_modules/.bin/wdio wdio.conf.emusim.js",
     "test:eu": "./node_modules/.bin/wdio wdio.conf.eu.central.js",
-    "auth": "./node_modules/.bin/wdio wdio.auth.conf.js",
     "suite": "./node_modules/.bin/wdio wdio.conf.js --suite",
-    "spec": "./node_modules/.bin/wdio wdio.conf.js --spec",
     "test:rdc": "./node_modules/.bin/wdio wdio.conf.rdc.west.js",
     "rdc-spec": "./node_modules/.bin/wdio wdio.conf.rdc.west.js --spec"
   },
@@ -17,16 +15,17 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/register": "^7.8.6",
-    "@wdio/cli": "^5.22.1",
-    "@wdio/local-runner": "^5.22.1",
-    "@wdio/mocha-framework": "^5.18.7",
-    "@wdio/sauce-service": "^5.22.1",
-    "@wdio/spec-reporter": "^5.18.7",
-    "@wdio/sync": "^5.20.1",
-    "chai": "^4.2.0",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@wdio/cli": "^6.0.6",
+    "@wdio/local-runner": "^6.0.6",
+    "@wdio/mocha-framework": "^6.0.6",
+    "@wdio/sauce-service": "^6.0.6",
+    "@wdio/spec-reporter": "^6.0.6",
+    "@wdio/sync": "^6.0.6",
+    "expect": "^25.2.4",
+    "expect-webdriverio": "^1.0.0",
     "faker": "^4.1.0"
   }
 }
