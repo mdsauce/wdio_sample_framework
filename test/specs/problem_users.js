@@ -1,5 +1,4 @@
 // locked_user.js
-var expect = require('chai').expect
 import LoginPage from '../../pages/login.page'
 
 describe('problem users', () => {
@@ -8,6 +7,6 @@ describe('problem users', () => {
         LoginPage.username.setValue('locked_out_user')
         LoginPage.password.setValue('secret_sauce')
         LoginPage.submit()
-        expect(LoginPage.lockedOut.getText()).to.contain("this user has been locked out")
+        expect(LoginPage.lockedOut).toHaveTextContaining("this user has been locked out")
     })
 })

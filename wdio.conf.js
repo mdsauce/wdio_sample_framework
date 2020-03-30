@@ -3,7 +3,7 @@ var rand_build = faker.fake("{{commerce.color}} {{commerce.productName}} {{syste
 // replace the random build name if user passes in a 2nd arg
 var npm_args = process.argv.slice(2);
 if (npm_args.length >= 2) {
-    rand_build = npm_args[npm_args.length - 1]
+    rand_build = npm_args[npm_args.length - 1] + " " + Date.now()
 }
 exports.config = {
     //
@@ -74,7 +74,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 15,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -179,7 +179,7 @@ exports.config = {
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
-    bail: 0,
+    bail: 6,
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
@@ -201,7 +201,11 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['sauce'],
+    services: [
+        ['sauce', {
+            sauceConnect: false,
+        }]
+    ],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -249,8 +253,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // beforeSession: function (config, capabilities, specs) {
-    // },
+    beforeSession: function (config, capabilities, specs) {
+        require("expect-webdriverio");
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.

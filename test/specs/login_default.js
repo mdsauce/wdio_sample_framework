@@ -1,5 +1,4 @@
 // standard_login.js
-var expect = require('chai').expect
 import LoginPage from '../../pages/login.page'
 import InventoryPage from '../../pages/inventory.page'
 
@@ -9,7 +8,7 @@ describe('login page', () => {
         LoginPage.username.setValue('foo')
         LoginPage.password.setValue('bar')
         LoginPage.submit()
-        expect(LoginPage.loginErr.getText()).to.contain("Epic sadface: Username and password do not match any user in this service")
+        expect(LoginPage.loginErr).toHaveTextContaining("username and password do not match", { ignoreCase: true })
     })
 
     it('should allow access with correct creds', () => {
@@ -17,6 +16,6 @@ describe('login page', () => {
         LoginPage.username.setValue('standard_user')
         LoginPage.password.setValue('secret_sauce')
         LoginPage.submit()
-        expect(InventoryPage.logo).to.exist
+        expect(InventoryPage.logo).toBePresent()
     })
 })
