@@ -1,5 +1,5 @@
-var faker = require('faker');
-var rand_build = faker.fake("generic build: {{commerce.color}} {{commerce.productName}} {{system.semver}}")
+var build_name = require("./build_name")
+let rand_build = build_name.rand_build()
 exports.config = {
     //
     // ====================
