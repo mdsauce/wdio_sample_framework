@@ -1,5 +1,5 @@
 // inventory_default.js
-var expect = require('chai').expect
+// var expect = require('chai').expect
 import InventoryPage from '../../pages/inventory.page'
 import LoginPage from '../../pages/login.page'
 import inventoryPage from '../../pages/inventory.page'
@@ -12,10 +12,10 @@ describe('Inventory page', () => {
     })
 
     it('should find Fleece Jacket first in list', () => {
-        expect(InventoryPage.firstItemName.getText()).to.contain("Fleece Jacket")
+        expect(InventoryPage.firstItemName).toHaveTextContaining("Fleece Jacket")
     })
 
     it('should have cheapest item at end of list', () => {
-        expect(InventoryPage.lastItemName.getText()).to.contain("Onesie")
+        expect(InventoryPage.lastItemName.getText()).toHaveTextContaining("Onesie")
     })
 })
