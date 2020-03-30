@@ -1,5 +1,4 @@
 // inventory_default.js
-// var expect = require('chai').expect
 import InventoryPage from '../../pages/inventory.page'
 import LoginPage from '../../pages/login.page'
 import inventoryPage from '../../pages/inventory.page'
@@ -16,6 +15,6 @@ describe('Inventory page', () => {
     })
 
     it('should have cheapest item at end of list', () => {
-        expect(InventoryPage.lastItemName.getText()).toHaveTextContaining("Onesie")
+        expect(InventoryPage.lastItemName).toHaveTextContaining("Onesie")
     })
 })
