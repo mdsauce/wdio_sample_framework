@@ -1,6 +1,4 @@
 // crash_test.js
-var expect = require('chai').expect
-
 
 describe('Browser should NOT crash', () => {
     it('after running a few searches', () => {
